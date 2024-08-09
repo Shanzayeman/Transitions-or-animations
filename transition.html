@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+</head>
+<style>
+    #one {
+        width: 100px;
+        height: 100px;
+        border: 1px solid px;
+        background-color: blueviolet;
+        transition: linear;
+        color: white;
+        transition: width 3s, height 3s;
+    }
+
+    #one:hover {
+        width: 300px;
+        height: 300px;
+    }
+    #two{
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        background-color: rgb(31, 25, 36);
+        transition: ease;
+        transition: width 2s, transform 2s;
+        color: white;
+    }
+    #two:hover{
+        width: 300px;
+        transform: rotate(360deg);
+    }
+    #three{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        transition: ease;
+        background-color: rgb(56, 131, 175);
+        transition: width 3s, height 3s ,transform 3s;
+    }
+    #three:hover{
+        width: 350px;
+        height: 350px;
+        transform: rotate(360deg);
+    }
+    #four{
+        width: 80px;
+        height: 80px;
+        border: 1px solid rgb(77, 34, 34);
+        background-color: rgb(77, 34, 34);
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 50%;
+        transition: ease-in-out;
+        transition: width 3s, height 3s , transform 3s;
+        color: white;
+    }
+    #four:hover{
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+    }
+    #five{
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgb(63, 70, 63);
+    }
+    #six{
+        width: 70px;
+        height: 70px;
+        border: 1px solid green;
+        background-color: rgb(62, 77, 107);
+        animation-name: example;
+        animation-duration: 4s;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    @keyframes example{
+        from{
+            background-color: rgb(245, 241, 241);
+        }
+        to{
+            background-color: rgb(8, 8, 8);
+        }
+    }
+    #seven{
+        width: 310px;
+        height: 310px;
+        border: 1px solid rgb(63, 70, 63);
+        background-color: rgb(27, 29, 32);
+        animation-name: lover;
+        animation-duration: 4s;
+        animation-iteration-count: 4;
+    }
+    @keyframes lover{
+        from{
+            background-color: yellowgreen;
+        }
+        to{
+            background-color: violet;
+        }
+    }
+    #eight{
+        width: 100px;
+        height: 100px;
+        border: 1px solid green;
+        background-color: rgb(71, 107, 179);
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 4;
+        animation-direction: reverse;
+    }
+    @keyframes example{
+        0%{
+            left: 0px;
+            top:0px;
+        }
+        25%{
+            left: 200px;
+            top:0px;
+        }
+        50%{
+            left: 200px;
+            top:200px;
+        }
+        75%{
+            left:0px;
+            top:200px;
+        }
+        100%{
+            left:0px;
+            top:0px;
+        }
+    }
+    #nine{
+        width: 130px;
+        height: 130px;
+        border: 1px solid rgb(63, 70, 63); 
+    }
+    #ten{
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgb(63, 70, 63); 
+        background-color: rgb(52, 79, 133);
+        position: relative;
+        animation-name: kiki;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+    }
+    @keyframes kiki{
+        0%{
+            left: 0px;
+            top: 0px;
+            transform: rotate(90deg);
+        }
+       25%{
+        left: 70px;
+            top: 0px;
+            transform: rotate(180deg);
+       }
+       50%{
+        left: 70px;
+            top: 70px;
+            transform: rotate(270deg);
+       }
+       75%{
+        left: 0px;
+            top: 70px;
+            transform: rotate(300deg);
+       }
+       100%{
+        left: 0px;
+            top: 0px;
+            transform: rotate(360deg);
+       }
+    }
+    #eleven{
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(63, 70, 63); 
+    }
+    .same{
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgb(62, 175, 62);   
+        animation-duration: 4s;
+        background-color: rebeccapurple;
+        animation-name: sunday;
+        animation-fill-mode: forwards;
+        position: relative;
+    }
+    @keyframes sunday{
+         from{
+            left: 0px;
+         }
+         to{
+            left: 70px;
+         }
+    }
+</style>
+
+<body>
+    <div id="one">
+       <p> Lorem ipsum dolor sit amet consectetur </p>
+    </div>
+    <div id="two">
+        <p> Lorem ipsum dolor sit amet consectetur </p>
+     </div>
+     <div id="three">
+       <div id="four"></div>
+     </div>
+     <div id="five">
+       <div id="six"></div>
+     </div>
+     <div id="seven">
+        <div id="eight"></div>
+      </div>
+      <div id="nine">
+        <img id="ten" src="images.jpg" alt="">
+      </div>
+      <div id="eleven">
+        <div class="same" style="animation-timing-function: linear;">one</div>
+        <div class="same" style="animation-timing-function: ease-out;">two</div>
+      </div>
+</body>
+
+</html>
